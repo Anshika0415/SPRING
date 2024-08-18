@@ -1,0 +1,27 @@
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- bean definitions here -->
+    <bean id="alien" class="org.example.Alien" scope="prototype"> </bean>
+    <bean id="alien1" class="org.example.Alien" autowire="byName">
+        <property name="age" value="42"> </property>
+<!--        <property name="lap" ref="lap1"> </property>-->
+<!--        <property name="desk" ref="desk1"> </property>-->
+       <!-- <property name="lap" ref="lap1"> </property> -->
+<!--        <constructor-arg type= "String" value="Anshika" />-->
+<!--        <constructor-arg type="org.example.Laptop" ref="lap1" />-->
+<!--        <constructor-arg index= "1" ref="lap1" />-->
+<!--        <constructor-arg index="0" value="Anshika" /> sequencing causes issue-->
+<!--        <constructor-arg name="lap" ref="lap1" />-->
+<!--        <constructor-arg name= "name" value="Anshika" />-->
+
+    </bean>
+    <bean id="lap1" class="org.example.Laptop"> </bean>
+    <bean id="desk1" class="org.example.Desktop"> </bean>
+
+
+
+</beans>

@@ -1,0 +1,9 @@
+In any project client send request for processed data like add basic salary and bonus of a person.
+Server caters to the request and gets data from repository and process it and give it back to client
+
+but how does server do all this...
+
+Server has 3 layers:
+1- Controller (It gets request from client and provide data to client. So it only communicates with client)
+2- Service (It just does the processing work but it gets its data from repository layer of the server)
+3- Repository (It connects with DB to get data and supply it to service layer of the server)
